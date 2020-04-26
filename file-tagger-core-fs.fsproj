@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>FileTaggerCoreFs</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="RectangularRegion.fs" />
+  </ItemGroup>
+
+</Project>
