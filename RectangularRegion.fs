@@ -9,7 +9,7 @@ type public RectangularRegion(x1 : int, x2 : int, y1 : int, y2 : int) =
             Seq.map (fun xRange -> RectangularRegion (fst xRange, snd xRange, fst yRange, snd yRange)) xRanges
         ) yRanges
 
-    static let rangesForAxis (divisions : int) (axisLength : int) : (int * int) array =
+    static member RangesForAxis (divisions : int) (axisLength : int) : (int * int) array =
         [| 0..divisions |]
         |> Array.map (fun x ->
             (
@@ -20,8 +20,8 @@ type public RectangularRegion(x1 : int, x2 : int, y1 : int, y2 : int) =
 
     static member Divide (divisionsPerAxis : int, width : int, height : int) : RectangularRegion seq =
         getRegionsFromXYRanges
-            (rangesForAxis divisionsPerAxis width)
-            (rangesForAxis divisionsPerAxis height)
+            (RectangularRegion.RangesForAxis divisionsPerAxis width)
+            (RectangularRegion.RangesForAxis divisionsPerAxis height)
     
     member public this.X1 : int = x1
     member public this.X2 : int = x2

@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <Compile Include="RectangularRegion.fs" />
+    <Compile Include="ShortImageString.fs" />
+    <Compile Include="ImageProcessing.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
   </ItemGroup>
 
 </Project>
